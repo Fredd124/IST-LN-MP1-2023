@@ -1,0 +1,61 @@
+0 1 0 eps
+0 50 1 -
+50 72 eps January
+72
+50 73 1 November
+73
+50 101 0 October
+101
+50 102 2 December
+102
+0 41 2 -
+41 51 eps February
+51
+0 42 3 -
+42 52 eps March
+52
+0 43 4 -
+43 53 eps April
+53
+0 44 5 -
+44 54 eps May
+54
+0 45 6 -
+45 55 eps June
+55
+0 46 7 -
+46 56 eps July
+56
+0 47 8 -
+47 57 eps August
+57
+0 48 9 -
+48 58 eps September
+58
+1 2 1 -
+2 25 eps January
+25
+1 4 2 -
+4 95 eps February
+95
+1 6 3 -
+6 7 eps March
+7
+1 8 4 -
+8 9 eps April
+9
+1 10 5 -
+10 11 eps May
+11
+1 12 6 -
+12 13 eps June
+13
+1 14 7 -
+14 15 eps July
+15
+1 16 8 -
+16 17 eps August
+17
+1 18 9 -
+18 19 eps September
+19
