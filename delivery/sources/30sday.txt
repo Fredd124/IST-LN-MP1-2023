@@ -1,7 +1,5 @@
 0 1 3 eps
 1 2 eps thirty
-1 3 eps third
-3
 2 4 eps - 
 4 5 1 first
 5

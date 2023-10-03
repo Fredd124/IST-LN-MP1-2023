@@ -100,11 +100,19 @@ trans=compiled/date2text.fst
 for w in compiled/t-9*.fst; do
     res=$(fstcompose $w compiled/${w:16} | fstshortestpath | fstproject --project_type=output |
             fstrmepsilon | fsttopsort | fstprint --acceptor --isymbols=./syms-out.txt | fst2word)
+    fstcompose $w compiled/${w:16}  > compiled/$(basename $w '.fst')output.fst
+    fstdraw --portrait --isymbols=syms.txt --osymbols=syms.txt compiled/$(basename $w '.fst')output.fst \
+        | dot -Tpdf > images/$(basename $w '.fst')output.pdf
     echo "  $w -> $res"
 done
 
 for w in compiled/t-0*.fst; do
     res=$(fstcompose $w $trans | fstshortestpath | fstproject --project_type=output |
             fstrmepsilon | fsttopsort | fstprint --acceptor --isymbols=./syms-out.txt | fst2word)
+    fstcompose $w $trans > compiled/$(basename $w '.fst')output.fst
+    fstdraw --portrait --isymbols=syms.txt --osymbols=syms.txt compiled/$(basename $w '.fst')output.fst \
+        | dot -Tpdf > images/$(basename $w '.fst')output.pdf
     echo "  $w -> $res"
 done
+
+
