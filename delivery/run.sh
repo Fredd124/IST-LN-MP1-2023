@@ -23,8 +23,6 @@ fstconcat compiled/day.fst compiled/sy.fst > compiled/dsy.fst
 fstconcat compiled/slashdate.fst compiled/dsy.fst > compiled/sdsy.fst
 fstconcat compiled/mmm2mm.fst compiled/sdsy.fst > compiled/mix2numerical.fst
 
-rm compiled/day.fst compiled/year1.fst compiled/sy.fst compiled/dsy.fst 
-
 echo "-> Finished mix2numerical"
 
     ######## pt2en.fst ########
@@ -36,16 +34,12 @@ echo "-> Finished pt2en"
 fstreverse compiled/monthPtToEn.fst > compiled/monthEnToPt.fst
 fstconcat compiled/monthEnToPt.fst compiled/sdsy.fst > compiled/en2pt.fst
 
-rm compiled/monthEnToPt.fst compiled/sdsy.fst
-
 echo "-> Finished en2pt"
 
     ######## day.fst ########
 fstunion compiled/0sday.fst compiled//10sday.fst > compiled/day1.fst
 fstunion compiled/day1.fst compiled/20sday.fst > compiled/day2.fst
 fstunion compiled/day2.fst compiled/30sday.fst > compiled/day.fst 
-
-rm compiled/day1.fst compiled/day2.fst
 
 echo "-> Finished day"
 
@@ -64,8 +58,6 @@ fstconcat compiled/day.fst compiled/csy.fst > compiled/dcsy.fst
 fstconcat compiled/slash.fst compiled/dcsy.fst > compiled/sdcsy.fst
 fstconcat compiled/month.fst compiled/sdcsy.fst > compiled/datenum2text.fst
 
-rm compiled/sy.fst compiled/csy.fst compiled/dcsy.fst 
-
 echo "-> Finished datenum2text"
 
     ######## mix2text.fst ########
@@ -76,8 +68,6 @@ echo "-> Finished mix2text"
     ######## date2text.fst #########
 fstunion compiled/month.fst compiled/month2name.fst > compiled/mix2.fst
 fstconcat compiled/mix2.fst compiled/sdcsy.fst > compiled/date2text.fst
-
-rm compiled/sdcsy.fst compiled/mix2.fst
 
 echo "-> Finished date2text"
 
